@@ -9,4 +9,8 @@ public class JSUtils {
     public static void executeJavaScript(String script){
         js.executeScript(script);
     }
+
+    public static JavascriptExecutor getJs() {
+        return js;
+    }
 }
