@@ -3,12 +3,9 @@ package resizableTest;
 import BaseTest.Hooks;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import utils.JSUtils;
 import utils.Pages;
 
-import static org.openqa.selenium.Keys.PAGE_DOWN;
 
 /**
  * 1.Open the browser and navigate to the page

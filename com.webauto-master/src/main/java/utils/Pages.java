@@ -11,6 +11,7 @@ import pages.droppable.Droppable_Accept_Page;
 import pages.droppable.Droppable_DefFunc_Page;
 import pages.droppable.Droppable_RevertDraggablePosition_Page;
 import pages.iframe.NestedIframe_Page;
+import pages.iframe.NormalIframe_Page;
 import pages.resizable.Animate_Page;
 import pages.resizable.Resizable_DefFunc_Page;
 import pages.resizable.Resizable_SynchronusResize_Page;
@@ -40,6 +41,7 @@ public class Pages {
     private HomePage homePage;
 
     private NestedIframe_Page nestedIframePage;
+    private NormalIframe_Page normalIframePage;
 
     private Resizable_DefFunc_Page resizableDefFuncPage;
     private Resizable_SynchronusResize_Page resizableSynchronusResizePage;
@@ -70,6 +72,7 @@ public class Pages {
         droppableAcceptPage = new Droppable_Accept_Page();
         droppableRevertDraggablePositionPage = new Droppable_RevertDraggablePosition_Page();
         selectableSeriliazePage = new Selectable_Seriliaze_Page();
+        normalIframePage=new NormalIframe_Page();
 
     }
 
@@ -139,6 +142,10 @@ public class Pages {
 
     public Selectable_Seriliaze_Page getSelectableSeriliazePage() {
         return selectableSeriliazePage;
+    }
+
+    public NormalIframe_Page getNormalIframePage(){
+        return normalIframePage;
     }
 
 }

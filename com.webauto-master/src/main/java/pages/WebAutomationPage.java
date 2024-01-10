@@ -51,6 +51,9 @@ public class WebAutomationPage extends BasePage {
     @FindBy(linkText = "Nested Iframe")
     private WebElement nestedIframeLink;
 
+    @FindBy(linkText = "Normal Iframe")
+    private WebElement normalIframeLink;
+
     @FindBy(linkText = "Alerts")
     private WebElement alertsLink;
 
@@ -135,5 +138,9 @@ public class WebAutomationPage extends BasePage {
 
     public void clickOnAnimateLink() {
         animateLink.click();
+    }
+
+    public void clickOnNormalIframeLink(){
+        normalIframeLink.click();
     }
 }

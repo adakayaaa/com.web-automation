@@ -22,6 +22,14 @@ public class AlertTypes_Page extends BasePage {
         showAlertButton.click();
     }
 
+    public void clickOnShowConfirmButton(){
+        showConfirmButton.click();
+    }
+
+    public void clickOnShowPromptButton(){
+        showPromptButton.click();
+    }
+
     public void switchToAlert(){
         alert = DRIVER.switchTo().alert();
     }

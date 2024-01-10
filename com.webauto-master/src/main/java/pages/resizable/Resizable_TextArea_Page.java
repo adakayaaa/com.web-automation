@@ -9,6 +9,10 @@ public class Resizable_TextArea_Page extends BasePage {
     @FindBy(id = "resizable-text-area-res")
     private WebElement firstElement;
 
+    @FindBy(xpath = "(//div[@class=\"ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se\"])[10]")
+    private WebElement resizeHandleForElement;
+
+
     public int getWidthOfResizableElement(){
         return firstElement.getSize().getWidth();
     }
@@ -16,14 +20,12 @@ public class Resizable_TextArea_Page extends BasePage {
     public int getHeightOfResizableElement(){
         return firstElement.getSize().getHeight();
     }
-
-    public WebElement getFirstElement() {
-        return firstElement;
+    public void resizeTheWebElement(int xOffset, int yOffset){
+        actions.clickAndHold(resizeHandleForElement).moveByOffset(xOffset, yOffset).release().build().perform();
     }
 
     public void sendToTextAtTheTextArea(String sentence){
         firstElement.sendKeys(sentence);
     }
-
 
 }
