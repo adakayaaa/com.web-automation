@@ -7,140 +7,240 @@ import java.util.List;
 
 public class WebAutomationPage extends BasePage {
 
-    @FindBy(linkText = "Draggable")
-    private WebElement draggableLink;
+	@FindBy(linkText = "Draggable")
+	private WebElement draggableLink;
 
-    @FindBy(linkText = "Default Functionality")
-    private WebElement defaultFunctionalityLink;
+	@FindBy(linkText = "Default Functionality")
+	private WebElement defaultFunctionalityLink;
 
-    @FindBy(linkText = "Auto Scrolling")
-    private WebElement autoScrollingLink;
+	@FindBy(linkText = "Auto Scrolling")
+	private WebElement autoScrollingLink;
 
-    @FindBy(linkText = "Constrain Movement")
-    private WebElement constrainMovementLink;
+	@FindBy(linkText = "Constrain Movement")
+	private WebElement constrainMovementLink;
 
-    @FindBy(linkText = "Handles")
-    private WebElement handlesLink;
+	@FindBy(linkText = "Handles")
+	private WebElement handlesLink;
 
-    @FindBy(linkText = "Droppable")
-    private WebElement droppableLink;
+	@FindBy(linkText = "Droppable")
+	private WebElement droppableLink;
 
-    @FindBy(linkText = "Accept")
-    private WebElement acceptLink;
+	@FindBy(linkText = "Accept")
+	private WebElement acceptLink;
 
-    @FindBy(linkText = "Revert draggable position")
-    private WebElement revertDraggablePositionLink;
+	@FindBy(linkText = "Revert draggable position")
+	private WebElement revertDraggablePositionLink;
 
-    @FindBy(linkText = "Resizable")
-    private WebElement resizableLink;
+	@FindBy(linkText = "Resizable")
+	private WebElement resizableLink;
 
-    @FindBy(linkText = "Synchronus Resize")
-    private WebElement resizableSynchronusResizeLink;
-    @FindBy(linkText = "Textarea")
-    private WebElement resizableTextAreaLink;
+	@FindBy(linkText = "Synchronus Resize")
+	private WebElement resizableSynchronusResizeLink;
 
-    @FindBy(linkText = "Selectable")
-    private WebElement selectableLink;
+	@FindBy(linkText = "Textarea")
+	private WebElement resizableTextAreaLink;
 
-    @FindBy(linkText = "Serialize")
-    private WebElement serializeLink;
+	@FindBy(linkText = "Selectable")
+	private WebElement selectableLink;
 
-    @FindBy(linkText = "Iframe")
-    private WebElement iframeLink;
+	@FindBy(linkText = "Serialize")
+	private WebElement serializeLink;
 
-    @FindBy(linkText = "Nested Iframe")
-    private WebElement nestedIframeLink;
+	@FindBy(linkText = "Iframe")
+	private WebElement iframeLink;
 
-    @FindBy(linkText = "Normal Iframe")
-    private WebElement normalIframeLink;
+	@FindBy(linkText = "Nested Iframe")
+	private WebElement nestedIframeLink;
 
-    @FindBy(linkText = "Alerts")
-    private WebElement alertsLink;
+	@FindBy(linkText = "Normal Iframe")
+	private WebElement normalIframeLink;
 
-    @FindBy(linkText = "Animate")
-    private WebElement animateLink;
+	@FindBy(linkText = "Alerts")
+	private WebElement alertsLink;
 
-    public void clickOnDraggableLink() {
-        draggableLink.click();
-    }
+	@FindBy(linkText = "Animate")
+	private WebElement animateLink;
 
-    public void clickOnDraggableDefaultFunctionalityLink() {
-        defaultFunctionalityLink.click();
-    }
+	@FindBy(linkText = "Autocomplete")
+	private WebElement autoCompleteLink;
 
-    public void clickOnDraggableConstrainMovementLink() {
-        constrainMovementLink.click();
-    }
+	@FindBy(linkText = "Multiple & Remote")
+	private WebElement multipleAndRemoteLink;
 
-    public void clickOnDraggableHandlesLink() {
-        handlesLink.click();
-    }
+	@FindBy(linkText = "Accent Folding")
+	private WebElement acceptFoldingLink;
 
-    public void clickOnDroppableDefaultFunctionalityLink() {
-        defaultFunctionalityLink.click();
-    }
+	@FindBy(linkText = "Menu")
+	private WebElement menuLink;
 
-    public void clickOnDroppableAcceptLink() {
-        acceptLink.click();
-    }
+	@FindBy(linkText = "Icons")
+	private WebElement iconsLink;
 
-    public void clickOnDroppableRevertDraggablePositionLink() {
-        revertDraggablePositionLink.click();
-    }
+	@FindBy(linkText = "Progress Bar")
+	private WebElement progressBarLink;
 
-    public void clickOnDroppableLink() {
-        droppableLink.click();
-    }
+	@FindBy(linkText = "Download Dialog")
+	private WebElement downloadDialogLink;
 
-    public void clickOnAutoScrollingLink() {
-        autoScrollingLink.click();
-    }
+	@FindBy(linkText = "Control Group")
+	private WebElement controlGroupLink;
 
-    public void clickOnResizableLink() {
-        resizableLink.click();
-    }
+	@FindBy(linkText = "Toolbar")
+	private WebElement toolBarLink;
 
-    public void clickOnResizableDefaultFuncLink() {
-        defaultFunctionalityLink.click();
-    }
+	@FindBy(linkText = "Datepicker")
+	private WebElement datePickerLink;
 
-    public void clickOnResizableSynchronusResizeLink() {
-        resizableSynchronusResizeLink.click();
-    }
+	@FindBy(linkText = "Display Multiple Months")
+	private WebElement displayMultipleMonthsLink;
 
-    public void clickOnResizableTextAreaLink() {
-        resizableTextAreaLink.click();
-    }
+	@FindBy(linkText = "Select Date Range")
+	private WebElement selectDateRangeLink;
 
-    public void clickOnSelectableLink() {
-        selectableLink.click();
-    }
+	@FindBy(linkText = "Dialog")
+	private WebElement dialogLink;
 
-    public void clickOnDefaultFunctionality() {
-        defaultFunctionalityLink.click();
-    }
+	@FindBy(linkText = "Modal Form")
+	private WebElement modalFormLink;
 
-    public void clickOnSerializeLink() {
-        serializeLink.click();
-    }
 
-    public void clickOnIframeLink() {
-        iframeLink.click();
-    }
+	public void clickOnDraggableLink() {
+		draggableLink.click();
+	}
 
-    public void clickOnNestedIframe() {
-        nestedIframeLink.click();
-    }
+	public void clickOnDraggableDefaultFunctionalityLink() {
+		defaultFunctionalityLink.click();
+	}
 
-    public void clickOnAlertsLink() {
-        alertsLink.click();
-    }
+	public void clickOnDraggableConstrainMovementLink() {
+		constrainMovementLink.click();
+	}
 
-    public void clickOnAnimateLink() {
-        animateLink.click();
-    }
+	public void clickOnDraggableHandlesLink() {
+		handlesLink.click();
+	}
 
-    public void clickOnNormalIframeLink(){
-        normalIframeLink.click();
-    }
+	public void clickOnDroppableDefaultFunctionalityLink() {
+		defaultFunctionalityLink.click();
+	}
+
+	public void clickOnDroppableAcceptLink() {
+		acceptLink.click();
+	}
+
+	public void clickOnDroppableRevertDraggablePositionLink() {
+		revertDraggablePositionLink.click();
+	}
+
+	public void clickOnDroppableLink() {
+		droppableLink.click();
+	}
+
+	public void clickOnAutoScrollingLink() {
+		autoScrollingLink.click();
+	}
+
+	public void clickOnResizableLink() {
+		resizableLink.click();
+	}
+
+	public void clickOnResizableDefaultFuncLink() {
+		defaultFunctionalityLink.click();
+	}
+
+	public void clickOnResizableSynchronusResizeLink() {
+		resizableSynchronusResizeLink.click();
+	}
+
+	public void clickOnResizableTextAreaLink() {
+		resizableTextAreaLink.click();
+	}
+
+	public void clickOnSelectableLink() {
+		selectableLink.click();
+	}
+
+	public void clickOnDefaultFunctionality() {
+		defaultFunctionalityLink.click();
+	}
+
+	public void clickOnSerializeLink() {
+		serializeLink.click();
+	}
+
+	public void clickOnIframeLink() {
+		iframeLink.click();
+	}
+
+	public void clickOnNestedIframe() {
+		nestedIframeLink.click();
+	}
+
+	public void clickOnAlertsLink() {
+		alertsLink.click();
+	}
+
+	public void clickOnAnimateLink() {
+		animateLink.click();
+	}
+
+	public void clickOnNormalIframeLink() {
+		normalIframeLink.click();
+	}
+
+	public void clickOnAutoCompleteLink() {
+		autoCompleteLink.click();
+	}
+
+	public void clickOnMultipleAndRemoteLink() {
+		multipleAndRemoteLink.click();
+	}
+
+	public void clickOnAccentFoldingLink() {
+		acceptFoldingLink.click();
+	}
+
+	public void clickOnIconLink() {
+		iconsLink.click();
+	}
+
+	public void clickOnMenuLink() {
+		menuLink.click();
+	}
+
+	public void clickOnProgressBarLink() {
+		progressBarLink.click();
+	}
+
+	public void clickOnDownloadDialogLink() {
+		downloadDialogLink.click();
+	}
+
+	public void clickOnControlGroupLink() {
+		controlGroupLink.click();
+	}
+
+	public void clickOnToolBarLink() {
+		toolBarLink.click();
+	}
+
+	public void clickOnDatepicker() {
+		datePickerLink.click();
+	}
+
+	public void clickOnDisplayMultipleMonths() {
+		displayMultipleMonthsLink.click();
+	}
+
+	public void clickOnSelectDateRange() {
+		selectDateRangeLink.click();
+	}
+
+	public void clickOnDialogLink(){
+		dialogLink.click();
+	}
+	public void clickOnModalFormLink(){
+		modalFormLink.click();
+	}
+
 }

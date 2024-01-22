@@ -5,71 +5,71 @@ import org.openqa.selenium.support.FindBy;
 import pages.BasePage;
 
 public class Droppable_DefFunc_Page extends BasePage {
-    @FindBy(id = "draggable-def-func")
-    private WebElement draggableElement;
 
-    @FindBy(id = "droppable-def-func")
-    private WebElement droppableElement;
+	@FindBy(id = "draggable-def-func")
+	private WebElement draggableElement;
 
-    public void dragAndDrop() {
-        actions.dragAndDrop(draggableElement, droppableElement).perform();
-    }
+	@FindBy(id = "droppable-def-func")
+	private WebElement droppableElement;
 
-    public String getDroppableElementText() {
-        return droppableElement.getText();
-    }
+	public void dragAndDrop() {
+		actions.dragAndDrop(draggableElement, droppableElement).perform();
+	}
 
-    public int getLocationOfDraggableX() {
-        return draggableElement.getLocation().getX();
-    }
+	public String getDroppableElementText() {
+		return droppableElement.getText();
+	}
 
-    public int getLocationOfDraggableY() {
-        return draggableElement.getLocation().getY();
-    }
+	public int getLocationOfDraggableX() {
+		return draggableElement.getLocation().getX();
+	}
 
-    public int getLocationOfDroppableX() {
-        return droppableElement.getLocation().getX();
-    }
+	public int getLocationOfDraggableY() {
+		return draggableElement.getLocation().getY();
+	}
 
-    public int getLocationOfDroppableY() {
-        return droppableElement.getLocation().getY();
-    }
+	public int getLocationOfDroppableX() {
+		return droppableElement.getLocation().getX();
+	}
 
-    public void dragAndDropByOffsets(int xOffset, int yOffset) {
-        actions.dragAndDropBy(draggableElement, xOffset, yOffset).perform();
-    }
+	public int getLocationOfDroppableY() {
+		return droppableElement.getLocation().getY();
+	}
 
-    public int getDroppableElementRightEdge() {
-        return droppableElement.getLocation().getX() + droppableElement.getSize().getWidth();
-    }
+	public void dragAndDropByOffsets(int xOffset, int yOffset) {
+		actions.dragAndDropBy(draggableElement, xOffset, yOffset).perform();
+	}
 
-    public int getDroppableElementBottomEdge() {
-        return droppableElement.getLocation().getY() + droppableElement.getSize().getHeight();
-    }
+	public int getDroppableElementRightEdge() {
+		return droppableElement.getLocation().getX() + droppableElement.getSize().getWidth();
+	}
 
-    public int getDroppableElementLeftEdge() {
-        return droppableElement.getLocation().getX();
-    }
+	public int getDroppableElementBottomEdge() {
+		return droppableElement.getLocation().getY() + droppableElement.getSize().getHeight();
+	}
 
-    public int getDroppableElementTopEdge() {
-        return droppableElement.getLocation().getY();
-    }
+	public int getDroppableElementLeftEdge() {
+		return droppableElement.getLocation().getX();
+	}
 
-    public int getDraggableElementRightEdge() {
-        return draggableElement.getLocation().getX() + draggableElement.getSize().getWidth();
-    }
+	public int getDroppableElementTopEdge() {
+		return droppableElement.getLocation().getY();
+	}
 
-    public int getDraggableElementBottomEdge() {
-        return draggableElement.getLocation().getY() + draggableElement.getSize().getHeight();
-    }
+	public int getDraggableElementRightEdge() {
+		return draggableElement.getLocation().getX() + draggableElement.getSize().getWidth();
+	}
 
-    public int getDraggableElementLeftEdge() {
-        return draggableElement.getLocation().getX();
-    }
+	public int getDraggableElementBottomEdge() {
+		return draggableElement.getLocation().getY() + draggableElement.getSize().getHeight();
+	}
 
-    public int getDraggableElementTopEdge() {
-        return draggableElement.getLocation().getY();
-    }
+	public int getDraggableElementLeftEdge() {
+		return draggableElement.getLocation().getX();
+	}
 
+	public int getDraggableElementTopEdge() {
+		return draggableElement.getLocation().getY();
+	}
 
 }

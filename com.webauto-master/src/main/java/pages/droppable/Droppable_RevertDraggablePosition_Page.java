@@ -4,78 +4,79 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import pages.BasePage;
 
-
-
 public class Droppable_RevertDraggablePosition_Page extends BasePage {
-    @FindBy(id = "draggable-revert-draggable")
-    private WebElement firstElement;
 
-    @FindBy(id = "draggable2-revert-draggable")
-    private WebElement secondElement;
+	@FindBy(id = "draggable-revert-draggable")
+	private WebElement firstElement;
 
-    @FindBy(id = "droppable-revert-draggable")
-    private WebElement droppableElement;
+	@FindBy(id = "draggable2-revert-draggable")
+	private WebElement secondElement;
 
-    public void dragAndDrop(WebElement draggableElement) {
-        actions.dragAndDrop(draggableElement, droppableElement).perform();
-    }
+	@FindBy(id = "droppable-revert-draggable")
+	private WebElement droppableElement;
 
-    public String getDroppableElementText() {
-        return droppableElement.getText();
-    }
-    public int getLocationOfDroppableX() {
-        return droppableElement.getLocation().getX();
-    }
+	public void dragAndDrop(WebElement draggableElement) {
+		actions.dragAndDrop(draggableElement, droppableElement).perform();
+	}
 
-    public int getLocationOfDroppableY() {
-        return droppableElement.getLocation().getY();
-    }
+	public String getDroppableElementText() {
+		return droppableElement.getText();
+	}
 
-    public int getLocationOfDraggableX(WebElement draggableElement) {
-        return draggableElement.getLocation().getX();
-    }
+	public int getLocationOfDroppableX() {
+		return droppableElement.getLocation().getX();
+	}
 
-    public int getLocationOfDraggableY(WebElement draggableElement) {
-        return draggableElement.getLocation().getY();
-    }
+	public int getLocationOfDroppableY() {
+		return droppableElement.getLocation().getY();
+	}
 
-    public int getDroppableElementRightEdge() {
-        return droppableElement.getLocation().getX() + droppableElement.getSize().getWidth();
-    }
+	public int getLocationOfDraggableX(WebElement draggableElement) {
+		return draggableElement.getLocation().getX();
+	}
 
-    public int getDroppableElementBottomEdge() {
-        return droppableElement.getLocation().getY() + droppableElement.getSize().getHeight();
-    }
+	public int getLocationOfDraggableY(WebElement draggableElement) {
+		return draggableElement.getLocation().getY();
+	}
 
-    public int getDroppableElementLeftEdge() {
-        return droppableElement.getLocation().getX();
-    }
+	public int getDroppableElementRightEdge() {
+		return droppableElement.getLocation().getX() + droppableElement.getSize().getWidth();
+	}
 
-    public int getDroppableElementTopEdge() {
-        return droppableElement.getLocation().getY();
-    }
+	public int getDroppableElementBottomEdge() {
+		return droppableElement.getLocation().getY() + droppableElement.getSize().getHeight();
+	}
 
-    public int getDraggableElementRightEdge(WebElement draggableElement) {
-        return draggableElement.getLocation().getX() + draggableElement.getSize().getWidth();
-    }
+	public int getDroppableElementLeftEdge() {
+		return droppableElement.getLocation().getX();
+	}
 
-    public int getDraggableElementBottomEdge(WebElement draggableElement) {
-        return draggableElement.getLocation().getY() + draggableElement.getSize().getHeight();
-    }
+	public int getDroppableElementTopEdge() {
+		return droppableElement.getLocation().getY();
+	}
 
-    public int getDraggableElementLeftEdge(WebElement draggableElement) {
-        return draggableElement.getLocation().getX();
-    }
+	public int getDraggableElementRightEdge(WebElement draggableElement) {
+		return draggableElement.getLocation().getX() + draggableElement.getSize().getWidth();
+	}
 
-    public int getDraggableElementTopEdge(WebElement draggableElement) {
-        return draggableElement.getLocation().getY();
-    }
+	public int getDraggableElementBottomEdge(WebElement draggableElement) {
+		return draggableElement.getLocation().getY() + draggableElement.getSize().getHeight();
+	}
 
-    public WebElement getFirstElement() {
-        return firstElement;
-    }
+	public int getDraggableElementLeftEdge(WebElement draggableElement) {
+		return draggableElement.getLocation().getX();
+	}
 
-    public WebElement getSecondElement() {
-        return secondElement;
-    }
+	public int getDraggableElementTopEdge(WebElement draggableElement) {
+		return draggableElement.getLocation().getY();
+	}
+
+	public WebElement getFirstElement() {
+		return firstElement;
+	}
+
+	public WebElement getSecondElement() {
+		return secondElement;
+	}
+
 }
