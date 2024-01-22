@@ -4,13 +4,14 @@ import org.openqa.selenium.JavascriptExecutor;
 
 public class JSUtils {
 
-    private static JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+	private static JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
 
-    public static void executeJavaScript(String script){
-        js.executeScript(script);
-    }
+	public static void executeJavaScript(String script) {
+		js.executeScript(script);
+	}
 
-    public static JavascriptExecutor getJs() {
-        return js;
-    }
+	public static JavascriptExecutor getJs() {
+		return js;
+	}
+
 }

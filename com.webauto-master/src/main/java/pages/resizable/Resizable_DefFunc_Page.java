@@ -5,21 +5,23 @@ import org.openqa.selenium.support.FindBy;
 import pages.BasePage;
 
 public class Resizable_DefFunc_Page extends BasePage {
-    @FindBy(id = "resizable-1")
-    private WebElement resizableElement;
 
-    @FindBy(css = "#resizable-1 > div.ui-icon")
-    private WebElement resizeHandle;
+	@FindBy(id = "resizable-1")
+	private WebElement resizableElement;
 
-    public void resizeTheWebElement(int xOffset, int yOffset){
-        actions.clickAndHold(resizeHandle).moveByOffset(xOffset, yOffset).release().build().perform();
-    }
+	@FindBy(css = "#resizable-1 > div.ui-icon")
+	private WebElement resizeHandle;
 
-    public int getWidthOfResizableElement(){
-        return resizableElement.getSize().getWidth();
-    }
+	public void resizeTheWebElement(int xOffset, int yOffset) {
+		actions.clickAndHold(resizeHandle).moveByOffset(xOffset, yOffset).release().build().perform();
+	}
 
-    public int getHeightOfResizableElement(){
-        return resizableElement.getSize().getHeight();
-    }
+	public int getWidthOfResizableElement() {
+		return resizableElement.getSize().getWidth();
+	}
+
+	public int getHeightOfResizableElement() {
+		return resizableElement.getSize().getHeight();
+	}
+
 }
