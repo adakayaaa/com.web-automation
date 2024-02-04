@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import utils.BrowserUtils;
 import utils.Pages;
 
-/**
+/*
  * 1. Open the browser and navigate to the page
  * 2. Click on the Alerts button
  * 3. Click on the Alert Types button
@@ -21,64 +21,54 @@ import utils.Pages;
 
 public class AlertTypes_ShowConfirm_Test extends Hooks {
 
-    Pages pages=new Pages();
+	Pages pages = new Pages();
 
-    @Test
-    void testShowConfirm(){
-        // 1. Open the browser and navigate to the page
-        pages.getHomePage().clickOnWebAutomationLink();
+	@Test
+	void testShowConfirm() {
+		// 1. Open the browser and navigate to the page
+		pages.getHomePage().clickOnWebAutomationLink();
 
-        BrowserUtils.scrollDownWithPageDown();
+		BrowserUtils.scrollDownWithPageDown();
 
-        // 2. Click on the Alerts button
-        pages.getWebAutomationPage().clickOnAlertsLink();
+		// 2. Click on the Alerts button
+		pages.getWebAutomationPage().clickOnAlertsLink();
 
-        BrowserUtils.scrollUpWithPageUp();
+		BrowserUtils.scrollUpWithPageUp();
 
-        // 3. Click on the Alert Types button
-        // 4. Click on the Show Confirm button
-        pages.getAlertTypesPage().clickOnShowConfirmButton();
+		// 3. Click on the Alert Types button
+		// 4. Click on the Show Confirm button
+		pages.getAlertTypesPage().clickOnShowConfirmButton();
 
-        BrowserUtils.wait(2);
+		BrowserUtils.wait(2);
 
-        // 5. Verify that alert text is "Are you sure?"
-        String expectedText = "Are you sure?";
-        String actualText = pages.getAlertTypesPage().getTextOfTheAlert();
-        Assertions.assertEquals(expectedText, actualText, "Wrong Text Prompted !");
+		// 5. Verify that alert text is "Are you sure?"
+		String expectedText = "Are you sure?";
+		String actualText = pages.getAlertTypesPage().getTextOfTheAlert();
+		Assertions.assertEquals(expectedText, actualText, "Wrong Text Prompted !");
 
-        BrowserUtils.wait(2);
+		BrowserUtils.wait(2);
 
-        // 6. Confirm the alert
-        pages.getAlertTypesPage().confirmTheAlert();
+		// 6. Confirm the alert
+		pages.getAlertTypesPage().confirmTheAlert();
 
-        // 7. Verify that alert text "Confirmed!"
-        String expectedTextSecond = "Confirmed!";
-        String actualTextSecond = pages.getAlertTypesPage().getTextOfTheAlert();
-        Assertions.assertEquals(expectedTextSecond, actualTextSecond, "Wrong Text Prompted !");
+		// 7. Verify that alert text "Confirmed!"
+		String expectedTextSecond = "Confirmed!";
+		String actualTextSecond = pages.getAlertTypesPage().getTextOfTheAlert();
+		Assertions.assertEquals(expectedTextSecond, actualTextSecond, "Wrong Text Prompted !");
 
-        BrowserUtils.wait(2);
+		BrowserUtils.wait(2);
 
-        //8. Confirm the alert
-        pages.getAlertTypesPage().confirmTheAlert();
+		// 8. Confirm the alert
+		pages.getAlertTypesPage().confirmTheAlert();
 
-        // 9. Click on the Show Confirm button
-        pages.getAlertTypesPage().clickOnShowConfirmButton();
+		// 9. Click on the Show Confirm button
+		pages.getAlertTypesPage().clickOnShowConfirmButton();
 
-        BrowserUtils.wait(2);
+		BrowserUtils.wait(2);
 
-        // 10. Dismiss the alert
-        pages.getAlertTypesPage().cancelTheAlert();
+		// 10. Dismiss the alert
+		pages.getAlertTypesPage().cancelTheAlert();
 
-
-
-
-
-
-
-
-
-
-
-    }
+	}
 
 }

@@ -1,8 +1,16 @@
 package utils;
 
+import pages.accordion.CollapseContent_Page;
+import pages.datePicker.DisplayMultipleMonths_Page;
+import pages.datePicker.SelectDateRange;
 import pages.HomePage;
 import pages.WebAutomationPage;
 import pages.alerts.AlertTypes_Page;
+import pages.autoComplete.AccentFolding_Page;
+import pages.autoComplete.MultipleAndRemote_Page;
+import pages.checkboxRadio.ProductSelector_Page;
+import pages.controlGroup.ToolBar_Page;
+import pages.dialog.Modal_Form_Page;
 import pages.draggable.AutoScrolling_Page;
 import pages.draggable.ConstrainMovement_Page;
 import pages.draggable.Draggable_DefFunc_Page;
@@ -12,140 +20,221 @@ import pages.droppable.Droppable_DefFunc_Page;
 import pages.droppable.Droppable_RevertDraggablePosition_Page;
 import pages.iframe.NestedIframe_Page;
 import pages.iframe.NormalIframe_Page;
+import pages.menu.Icons_Page;
+import pages.progressBar.DownloadDialog_Page;
 import pages.resizable.Animate_Page;
 import pages.resizable.Resizable_DefFunc_Page;
 import pages.resizable.Resizable_SynchronusResize_Page;
 import pages.resizable.Resizable_TextArea_Page;
 import pages.selectable.Selectable_DefFunc_Page;
 import pages.selectable.Selectable_Seriliaze_Page;
+import pages.slider.SnapToIncrements_Page;
+import pages.sortable.DisplayAsGrid_Page;
+import pages.sortable.IncludeAndExcludeItems_Page;
+import pages.spinner.SpinnerOverflow_Page;
 
 
 public class Pages {
 
-    private AlertTypes_Page alertTypesPage;
+	private AccentFolding_Page accentFoldingPage;
 
-    private Animate_Page animatePage;
+	private AlertTypes_Page alertTypesPage;
 
-    private AutoScrolling_Page autoScrollingPage;
-    private ConstrainMovement_Page constrainMovementPage;
+	private Animate_Page animatePage;
 
-    private Draggable_DefFunc_Page draggableDefFuncPage;
+	private AutoScrolling_Page autoScrollingPage;
+	private CollapseContent_Page collapseContentPage;
 
-    private Droppable_Accept_Page droppableAcceptPage;
+	private ConstrainMovement_Page constrainMovementPage;
+	private DisplayAsGrid_Page displayAsGridPage;
 
-    private Droppable_DefFunc_Page droppableDefFuncPage;
-    private Droppable_RevertDraggablePosition_Page droppableRevertDraggablePositionPage;
+	private DisplayMultipleMonths_Page displayMultipleMonthsPage;
 
-    private Handles_Page handlesPage;
+	private DownloadDialog_Page downloadDialogPage;
 
-    private HomePage homePage;
+	private Draggable_DefFunc_Page draggableDefFuncPage;
 
-    private NestedIframe_Page nestedIframePage;
-    private NormalIframe_Page normalIframePage;
+	private Droppable_Accept_Page droppableAcceptPage;
 
-    private Resizable_DefFunc_Page resizableDefFuncPage;
-    private Resizable_SynchronusResize_Page resizableSynchronusResizePage;
+	private Droppable_DefFunc_Page droppableDefFuncPage;
 
-    private Resizable_TextArea_Page resizableTextAreaPage;
+	private Droppable_RevertDraggablePosition_Page droppableRevertDraggablePositionPage;
 
-    private Selectable_DefFunc_Page selectableDefFuncPage;
+	private Handles_Page handlesPage;
 
-    private Selectable_Seriliaze_Page selectableSeriliazePage;
+	private HomePage homePage;
 
-    private WebAutomationPage webAutomationPage;
+	private Icons_Page iconsPage;
+	private IncludeAndExcludeItems_Page includeAndExcludeItemsPage;
+	private Modal_Form_Page modalFormPage;
 
-    public Pages() {
-        homePage = new HomePage();
-        webAutomationPage = new WebAutomationPage();
-        draggableDefFuncPage = new Draggable_DefFunc_Page();
-        autoScrollingPage = new AutoScrolling_Page();
-        droppableDefFuncPage = new Droppable_DefFunc_Page();
-        resizableDefFuncPage = new Resizable_DefFunc_Page();
-        resizableSynchronusResizePage = new Resizable_SynchronusResize_Page();
-        resizableTextAreaPage = new Resizable_TextArea_Page();
-        selectableDefFuncPage = new Selectable_DefFunc_Page();
-        nestedIframePage = new NestedIframe_Page();
-        alertTypesPage = new AlertTypes_Page();
-        animatePage = new Animate_Page();
-        constrainMovementPage = new ConstrainMovement_Page();
-        handlesPage = new Handles_Page();
-        droppableAcceptPage = new Droppable_Accept_Page();
-        droppableRevertDraggablePositionPage = new Droppable_RevertDraggablePosition_Page();
-        selectableSeriliazePage = new Selectable_Seriliaze_Page();
-        normalIframePage=new NormalIframe_Page();
+	private MultipleAndRemote_Page multipleAndRemotePage;
 
-    }
+	private NestedIframe_Page nestedIframePage;
 
-    public HomePage getHomePage() {
-        return homePage;
-    }
+	private NormalIframe_Page normalIframePage;
 
-    public WebAutomationPage getWebAutomationPage() {
-        return webAutomationPage;
-    }
+	private Resizable_DefFunc_Page resizableDefFuncPage;
 
-    public Draggable_DefFunc_Page getDraggableDefFuncPage() {
-        return draggableDefFuncPage;
-    }
+	private Resizable_SynchronusResize_Page resizableSynchronusResizePage;
 
-    public AutoScrolling_Page getAutoScrollingPage() {
-        return autoScrollingPage;
-    }
+	private Resizable_TextArea_Page resizableTextAreaPage;
 
-    public Droppable_DefFunc_Page getDroppableDefFuncPage() {
-        return droppableDefFuncPage;
-    }
+	private Selectable_DefFunc_Page selectableDefFuncPage;
 
-    public Resizable_DefFunc_Page getResizableDefFuncPage() {
-        return resizableDefFuncPage;
-    }
+	private Selectable_Seriliaze_Page selectableSeriliazePage;
 
-    public Selectable_DefFunc_Page getSelectableDefFuncPage() {
-        return selectableDefFuncPage;
-    }
+	private SelectDateRange selectDateRange;
 
-    public NestedIframe_Page getNestedIframePage() {
-        return nestedIframePage;
-    }
+	private SnapToIncrements_Page snapToIncrementsPage;
 
-    public AlertTypes_Page getAlertTypesPage() {
-        return alertTypesPage;
-    }
+	private SpinnerOverflow_Page spinnerOverflowPage;
 
-    public Animate_Page getAnimatePage() {
-        return animatePage;
-    }
+	private ToolBar_Page toolBarPage;
 
-    public ConstrainMovement_Page getConstrainMovementPage() {
-        return constrainMovementPage;
-    }
+	private ProductSelector_Page productSelectorPage;
+	private WebAutomationPage webAutomationPage;
 
-    public Handles_Page getHandlesPage() {
-        return handlesPage;
-    }
+	public Pages() {
+		homePage = new HomePage();
+		webAutomationPage = new WebAutomationPage();
+		draggableDefFuncPage = new Draggable_DefFunc_Page();
+		autoScrollingPage = new AutoScrolling_Page();
+		droppableDefFuncPage = new Droppable_DefFunc_Page();
+		resizableDefFuncPage = new Resizable_DefFunc_Page();
+		resizableSynchronusResizePage = new Resizable_SynchronusResize_Page();
+		resizableTextAreaPage = new Resizable_TextArea_Page();
+		selectableDefFuncPage = new Selectable_DefFunc_Page();
+		nestedIframePage = new NestedIframe_Page();
+		alertTypesPage = new AlertTypes_Page();
+		animatePage = new Animate_Page();
+		constrainMovementPage = new ConstrainMovement_Page();
+		handlesPage = new Handles_Page();
+		droppableAcceptPage = new Droppable_Accept_Page();
+		droppableRevertDraggablePositionPage = new Droppable_RevertDraggablePosition_Page();
+		selectableSeriliazePage = new Selectable_Seriliaze_Page();
+		normalIframePage = new NormalIframe_Page();
+		multipleAndRemotePage = new MultipleAndRemote_Page();
+		accentFoldingPage = new AccentFolding_Page();
+		iconsPage = new Icons_Page();
+		downloadDialogPage = new DownloadDialog_Page();
+		toolBarPage = new ToolBar_Page();
+		displayMultipleMonthsPage = new DisplayMultipleMonths_Page();
+		selectDateRange = new SelectDateRange();
+		modalFormPage=new Modal_Form_Page();
+		snapToIncrementsPage=new SnapToIncrements_Page();
+		spinnerOverflowPage=new SpinnerOverflow_Page();
+		displayAsGridPage=new DisplayAsGrid_Page();
+		productSelectorPage=new ProductSelector_Page();
+		includeAndExcludeItemsPage=new IncludeAndExcludeItems_Page();
+		collapseContentPage=new CollapseContent_Page();
+	}
 
-    public Droppable_Accept_Page getDroppableAcceptPage() {
-        return droppableAcceptPage;
-    }
+	public HomePage getHomePage() {
+		return homePage;
+	}
 
-    public Droppable_RevertDraggablePosition_Page getDroppableRevertDraggablePositionPage() {
-        return droppableRevertDraggablePositionPage;
-    }
+	public WebAutomationPage getWebAutomationPage() {
+		return webAutomationPage;
+	}
 
-    public Resizable_SynchronusResize_Page getResizableSynchronusResizePage() {
-        return resizableSynchronusResizePage;
-    }
+	public Draggable_DefFunc_Page getDraggableDefFuncPage() {
+		return draggableDefFuncPage;
+	}
 
-    public Resizable_TextArea_Page getResizableTextAreaPage() {
-        return resizableTextAreaPage;
-    }
+	public AutoScrolling_Page getAutoScrollingPage() {
+		return autoScrollingPage;
+	}
 
-    public Selectable_Seriliaze_Page getSelectableSeriliazePage() {
-        return selectableSeriliazePage;
-    }
+	public Droppable_DefFunc_Page getDroppableDefFuncPage() {
+		return droppableDefFuncPage;
+	}
 
-    public NormalIframe_Page getNormalIframePage(){
-        return normalIframePage;
-    }
+	public Resizable_DefFunc_Page getResizableDefFuncPage() {
+		return resizableDefFuncPage;
+	}
+
+	public Selectable_DefFunc_Page getSelectableDefFuncPage() {
+		return selectableDefFuncPage;
+	}
+
+	public NestedIframe_Page getNestedIframePage() {
+		return nestedIframePage;
+	}
+
+	public AlertTypes_Page getAlertTypesPage() {
+		return alertTypesPage;
+	}
+
+	public Animate_Page getAnimatePage() {
+		return animatePage;
+	}
+
+	public ConstrainMovement_Page getConstrainMovementPage() {
+		return constrainMovementPage;
+	}
+
+	public Handles_Page getHandlesPage() {
+		return handlesPage;
+	}
+
+	public Droppable_Accept_Page getDroppableAcceptPage() {
+		return droppableAcceptPage;
+	}
+
+	public Droppable_RevertDraggablePosition_Page getDroppableRevertDraggablePositionPage() {
+		return droppableRevertDraggablePositionPage;
+	}
+
+	public Resizable_SynchronusResize_Page getResizableSynchronusResizePage() {
+		return resizableSynchronusResizePage;
+	}
+
+	public Resizable_TextArea_Page getResizableTextAreaPage() {
+		return resizableTextAreaPage;
+	}
+
+	public Selectable_Seriliaze_Page getSelectableSeriliazePage() {
+		return selectableSeriliazePage;
+	}
+
+	public NormalIframe_Page getNormalIframePage() {
+		return normalIframePage;
+	}
+
+	public MultipleAndRemote_Page getMultipleAndRemotePage() {
+		return multipleAndRemotePage;
+	}
+
+	public AccentFolding_Page getAccentFoldingPage() {
+		return accentFoldingPage;
+	}
+
+	public Icons_Page getIconsPage() {
+		return iconsPage;
+	}
+
+	public DownloadDialog_Page getDownloadDialogPage() {
+		return downloadDialogPage;
+	}
+
+	public ToolBar_Page getToolBarPage() {
+		return toolBarPage;
+	}
+
+	public DisplayMultipleMonths_Page getDisplayMultipleMonthsPage() {
+		return displayMultipleMonthsPage;
+	}
+
+	public SelectDateRange getSelectDateRange() {
+		return selectDateRange;
+	}
+	public Modal_Form_Page getModalFormPage(){return modalFormPage;}
+	public SnapToIncrements_Page getSnapToIncrementsPage(){return snapToIncrementsPage;}
+	public SpinnerOverflow_Page getSpinnerOverflowPage(){return spinnerOverflowPage;}
+	public DisplayAsGrid_Page getDisplayAsGridPage(){return displayAsGridPage;}
+	public ProductSelector_Page getProductSelectorPage(){return productSelectorPage;}
+	public IncludeAndExcludeItems_Page getIncludeAndExcludeItemsPage(){return includeAndExcludeItemsPage;}
+	public CollapseContent_Page getCollapseContentPage(){return collapseContentPage;}
 
 }

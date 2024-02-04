@@ -6,23 +6,23 @@ import pages.BasePage;
 
 public class NormalIframe_Page extends BasePage {
 
-    @FindBy(id = "nestedIframe")
-    private WebElement iFrameElement;
+	@FindBy(id = "nestedIframe")
+	private WebElement iFrameElement;
 
-    @FindBy(css = "h1")
-    private WebElement headerInIframeElement;
+	@FindBy(css = "h1")
+	private WebElement headerInIframeElement;
 
-    public void switchToIframe(){
-        DRIVER.switchTo().frame(iFrameElement);
-    }
+	public void switchToIframe() {
+		DRIVER.switchTo().frame(iFrameElement);
+	}
 
-    public String getHeaderInIframe(){
-        switchToIframe();
-        return headerInIframeElement.getText();
-    }
+	public String getHeaderInIframe() {
+		switchToIframe();
+		return headerInIframeElement.getText();
+	}
 
-    public void printTitle(){
-        System.out.println(DRIVER.switchTo().frame(iFrameElement).getTitle());
-    }
+	public void printTitle() {
+		System.out.println(DRIVER.switchTo().frame(iFrameElement).getTitle());
+	}
 
 }

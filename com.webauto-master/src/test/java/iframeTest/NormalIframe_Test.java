@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import utils.BrowserUtils;
 import utils.Pages;
 
-/**
+/*
  * 1.Open the browser and navigate to the page
  * 2.Click on Iframe link
  * 3.Click on Normal Iframe link
@@ -14,27 +14,29 @@ import utils.Pages;
  */
 
 public class NormalIframe_Test extends Hooks {
-    Pages pages =new Pages();
 
-    @Test
-    void testNormalIframe(){
-        // 1.Open the browser and navigate to the page
-        pages.getHomePage().clickOnWebAutomationLink();
+	Pages pages = new Pages();
 
-        BrowserUtils.scrollDownWithPageDown();
+	@Test
+	void testNormalIframe() {
+		// 1.Open the browser and navigate to the page
+		pages.getHomePage().clickOnWebAutomationLink();
 
-        // 2.Click on Iframe link
-        pages.getWebAutomationPage().clickOnIframeLink();
+		BrowserUtils.scrollDownWithPageDown();
 
-        BrowserUtils.scrollUpWithPageUp();
+		// 2.Click on Iframe link
+		pages.getWebAutomationPage().clickOnIframeLink();
 
-        //3.Click on Normal Iframe link
-        pages.getWebAutomationPage().clickOnNormalIframeLink();
+		BrowserUtils.scrollUpWithPageUp();
 
-        //4.Verify that the header text "Inar academy" In iframe
-        String expectedHeader = "Inar academy";
-        String actualHeader= pages.getNormalIframePage().getHeaderInIframe();
+		// 3.Click on Normal Iframe link
+		pages.getWebAutomationPage().clickOnNormalIframeLink();
 
-        Assertions.assertEquals(expectedHeader,actualHeader,"The header is wrong!");
-    }
+		// 4.Verify that the header text "Inar academy" In iframe
+		String expectedHeader = "Inar academy";
+		String actualHeader = pages.getNormalIframePage().getHeaderInIframe();
+
+		Assertions.assertEquals(expectedHeader, actualHeader, "The header is wrong!");
+	}
+
 }

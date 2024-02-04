@@ -5,9 +5,9 @@ import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import utils.Pages;
 
-/**
+/*
  * 1. Open the browser and navigate to the page
- * 2. click on the droppable button
+ *  2. click on the droppable button
  * 3. click on the accept button
  * 4. Drag the first draggable element and drop it to the target-droppable element
  * 5. Verify that the first draggable element has not been dropped to the target-droppable element
@@ -17,54 +17,63 @@ import utils.Pages;
  */
 
 public class Droppable_Accept_Test extends Hooks {
-    Pages pages=new Pages();
 
-    @Test
-    void testAccept(){
-        //1. Open the browser and navigate to the page
-        pages.getHomePage().clickOnWebAutomationLink();
+	Pages pages = new Pages();
 
-        //2. click on the droppable button
-        pages.getWebAutomationPage().clickOnDroppableLink();
+	@Test
+	void testAccept() {
+		// 1. Open the browser and navigate to the page
+		pages.getHomePage().clickOnWebAutomationLink();
 
-        //3. click on the accept button
-        pages.getWebAutomationPage().clickOnDroppableAcceptLink();
+		// 2. click on the droppable button
+		pages.getWebAutomationPage().clickOnDroppableLink();
 
-        //4. Drag the first draggable element and drop it to the target-droppable element
-        pages.getDroppableAcceptPage().dragAndDrop(pages.getDroppableAcceptPage().getDraggableFirstElement());
+		// 3. click on the accept button
+		pages.getWebAutomationPage().clickOnDroppableAcceptLink();
 
-        //5. Verify that the first draggable element has not been dropped to the target-droppable element
-        Assertions.assertThat(pages.getDroppableAcceptPage().getDroppableElementText()).isEqualTo("accept: '#draggable'");
+		// 4. Drag the first draggable element and drop it to the target-droppable element
+		pages.getDroppableAcceptPage().dragAndDrop(pages.getDroppableAcceptPage().getDraggableFirstElement());
 
-        // 6. Drag the second draggable element and drop it to the target-droppable element
-        pages.getDroppableAcceptPage().dragAndDrop(pages.getDroppableAcceptPage().getDraggableSecondElement());
+		// 5. Verify that the first draggable element has not been dropped to the
+		// target-droppable element
+		Assertions.assertThat(pages.getDroppableAcceptPage().getDroppableElementText())
+			.isEqualTo("accept: '#draggable'");
 
-        //7. Verify that the second draggable element has been dropped to the target-droppable element
+		// 6. Drag the second draggable element and drop it to the target-droppable
+		// element
+		pages.getDroppableAcceptPage().dragAndDrop(pages.getDroppableAcceptPage().getDraggableSecondElement());
 
-            //find the second draggable element edges
-        int secondDraggableElementTopEdge = pages.getDroppableAcceptPage().getDraggableElementTopEdge(pages.getDroppableAcceptPage().getDraggableSecondElement());
-        int secondDraggableElementBottomEdge = pages.getDroppableAcceptPage().getDraggableElementBottomEdge(pages.getDroppableAcceptPage().getDraggableSecondElement());
-        int secondDraggableElementRightEdge = pages.getDroppableAcceptPage().getDraggableElementRightEdge(pages.getDroppableAcceptPage().getDraggableSecondElement());
-        int secondDraggableElementLeftEdge = pages.getDroppableAcceptPage().getDraggableElementLeftEdge(pages.getDroppableAcceptPage().getDraggableSecondElement());
+		// 7. Verify that the second draggable element has been dropped to the
+		// target-droppable element
 
-            //find the droppable element edges
-        int droppableElementTopEdge =pages.getDroppableAcceptPage().getDroppableElementTopEdge();
-        int droppableElementBottomEdge =pages.getDroppableAcceptPage().getDroppableElementBottomEdge();
-        int droppableElementRightEdge =pages.getDroppableAcceptPage().getDroppableElementRightEdge();
-        int droppableElementLeftEdge =pages.getDroppableAcceptPage().getDroppableElementLeftEdge();
+		// find the second draggable element edges
+		int secondDraggableElementTopEdge = pages.getDroppableAcceptPage()
+			.getDraggableElementTopEdge(pages.getDroppableAcceptPage().getDraggableSecondElement());
+		int secondDraggableElementBottomEdge = pages.getDroppableAcceptPage()
+			.getDraggableElementBottomEdge(pages.getDroppableAcceptPage().getDraggableSecondElement());
+		int secondDraggableElementRightEdge = pages.getDroppableAcceptPage()
+			.getDraggableElementRightEdge(pages.getDroppableAcceptPage().getDraggableSecondElement());
+		int secondDraggableElementLeftEdge = pages.getDroppableAcceptPage()
+			.getDraggableElementLeftEdge(pages.getDroppableAcceptPage().getDraggableSecondElement());
 
-        Assertions.assertThat(secondDraggableElementBottomEdge).isBetween(droppableElementTopEdge, droppableElementBottomEdge);
-        Assertions.assertThat(secondDraggableElementTopEdge).isBetween(droppableElementTopEdge, droppableElementBottomEdge);
-        Assertions.assertThat(secondDraggableElementLeftEdge).isBetween(droppableElementLeftEdge, droppableElementRightEdge);
-        Assertions.assertThat(secondDraggableElementRightEdge).isBetween(droppableElementLeftEdge, droppableElementRightEdge);
+		// find the droppable element edges
+		int droppableElementTopEdge = pages.getDroppableAcceptPage().getDroppableElementTopEdge();
+		int droppableElementBottomEdge = pages.getDroppableAcceptPage().getDroppableElementBottomEdge();
+		int droppableElementRightEdge = pages.getDroppableAcceptPage().getDroppableElementRightEdge();
+		int droppableElementLeftEdge = pages.getDroppableAcceptPage().getDroppableElementLeftEdge();
 
-        // 8. Verify that the text of the target-droppable element has changed to Dropped!
-        Assertions.assertThat(pages.getDroppableAcceptPage().getDroppableElementText()).isEqualTo("Dropped!");
+		Assertions.assertThat(secondDraggableElementBottomEdge)
+			.isBetween(droppableElementTopEdge, droppableElementBottomEdge);
+		Assertions.assertThat(secondDraggableElementTopEdge)
+			.isBetween(droppableElementTopEdge, droppableElementBottomEdge);
+		Assertions.assertThat(secondDraggableElementLeftEdge)
+			.isBetween(droppableElementLeftEdge, droppableElementRightEdge);
+		Assertions.assertThat(secondDraggableElementRightEdge)
+			.isBetween(droppableElementLeftEdge, droppableElementRightEdge);
 
+		// 8. Verify that the text of the target-droppable element has changed to Dropped!
+		Assertions.assertThat(pages.getDroppableAcceptPage().getDroppableElementText()).isEqualTo("Dropped!");
 
+	}
 
-
-
-
-    }
 }
