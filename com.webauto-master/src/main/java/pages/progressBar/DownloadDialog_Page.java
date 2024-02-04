@@ -20,9 +20,7 @@ public class DownloadDialog_Page extends BasePage {
 	@FindBy(xpath = "//*[@id=\"dialog-container-download-dialog\"]/div/div[1]/button/span[1]")
 	private WebElement closeButton;
 
-	public void clickOnButton(WebElement webElement) {
-		webElement.click();
-	}
+
 
 	public String getDownloadButtonText() {
 		return downloadButton.getText();
@@ -32,16 +30,16 @@ public class DownloadDialog_Page extends BasePage {
 		return fileDownloadTitleBar.isDisplayed();
 	}
 
-	public WebElement getDownloadButton() {
-		return downloadButton;
+	public void clickOnDownloadButton() {
+		 downloadButton.click();
 	}
 
-	public WebElement getCancelDownloadButton() {
-		return cancelDownloadButton;
+	public void clickOnCancelDownloadButton() {
+		cancelDownloadButton.click();
 	}
 
-	public WebElement getCloseButton() {
-		return closeButton;
+	public void clickOnCloseButton() {
+		closeButton.click();
 	}
 
 }

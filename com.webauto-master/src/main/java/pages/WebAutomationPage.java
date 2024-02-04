@@ -3,7 +3,7 @@ package pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import java.util.List;
+import javax.sound.sampled.Line;
 
 public class WebAutomationPage extends BasePage {
 
@@ -103,6 +103,37 @@ public class WebAutomationPage extends BasePage {
 	@FindBy(linkText = "Modal Form")
 	private WebElement modalFormLink;
 
+	@FindBy(linkText = "Slider")
+	private WebElement sliderLink;
+
+	@FindBy(linkText = "Snap to increments")
+	private WebElement snapToIncrementsLink;
+
+	@FindBy(linkText = "Spinner")
+	private WebElement spinnerLink;
+
+	@FindBy(linkText = "Spinner Overflow")
+	private WebElement spinnerOverflowLink;
+
+	@FindBy(linkText = "Sortable")
+	private WebElement sortableLink;
+
+	@FindBy(linkText = "Display as Grid")
+	private WebElement displayAsGrid;
+
+	@FindBy(linkText = "Include / exclude items")
+	private WebElement includeAndExcludeItemsLink;
+
+	@FindBy(linkText = "Checkbox Radio")
+	private WebElement checkboxRadioLink;
+	@FindBy(linkText = "Product Selector")
+	private WebElement productSelectorLink;
+
+	@FindBy(linkText = "Accordion")
+	private WebElement accordionLink;
+
+	@FindBy(linkText = "Collapse Content")
+	private WebElement collapseContentLink;
 
 	public void clickOnDraggableLink() {
 		draggableLink.click();
@@ -242,5 +273,16 @@ public class WebAutomationPage extends BasePage {
 	public void clickOnModalFormLink(){
 		modalFormLink.click();
 	}
+	public void clickOnSliderLink(){sliderLink.click();}
+	public void clickOnSnapToIncrementsLink(){snapToIncrementsLink.click();}
+	public void clickOnSpinnerLink(){spinnerLink.click();}
+	public void clickOnSpinnerOverflowLink(){spinnerOverflowLink.click();}
+	public void clickOnSortableLink(){sortableLink.click();}
+	public void clickOnDisplayAsGridLink(){displayAsGrid.click();}
+	public void clickOnIncludeAndExcludeItemsLink(){includeAndExcludeItemsLink.click();}
+	public void clickOnCheckboxRadioLink(){checkboxRadioLink.click();}
+	public void clickOnProductSelector(){productSelectorLink.click();}
 
+	public void clickOnAccordionLink(){accordionLink.click();}
+	public void clickOnCollapseContentLink(){collapseContentLink.click();}
 }

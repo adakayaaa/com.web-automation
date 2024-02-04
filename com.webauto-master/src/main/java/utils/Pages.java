@@ -1,12 +1,14 @@
 package utils;
 
-import pages.Datepicker.DisplayMultipleMonths_Page;
-import pages.Datepicker.SelectDateRange;
+import pages.accordion.CollapseContent_Page;
+import pages.datePicker.DisplayMultipleMonths_Page;
+import pages.datePicker.SelectDateRange;
 import pages.HomePage;
 import pages.WebAutomationPage;
 import pages.alerts.AlertTypes_Page;
 import pages.autoComplete.AccentFolding_Page;
 import pages.autoComplete.MultipleAndRemote_Page;
+import pages.checkboxRadio.ProductSelector_Page;
 import pages.controlGroup.ToolBar_Page;
 import pages.dialog.Modal_Form_Page;
 import pages.draggable.AutoScrolling_Page;
@@ -26,6 +28,11 @@ import pages.resizable.Resizable_SynchronusResize_Page;
 import pages.resizable.Resizable_TextArea_Page;
 import pages.selectable.Selectable_DefFunc_Page;
 import pages.selectable.Selectable_Seriliaze_Page;
+import pages.slider.SnapToIncrements_Page;
+import pages.sortable.DisplayAsGrid_Page;
+import pages.sortable.IncludeAndExcludeItems_Page;
+import pages.spinner.SpinnerOverflow_Page;
+
 
 public class Pages {
 
@@ -36,8 +43,10 @@ public class Pages {
 	private Animate_Page animatePage;
 
 	private AutoScrolling_Page autoScrollingPage;
+	private CollapseContent_Page collapseContentPage;
 
 	private ConstrainMovement_Page constrainMovementPage;
+	private DisplayAsGrid_Page displayAsGridPage;
 
 	private DisplayMultipleMonths_Page displayMultipleMonthsPage;
 
@@ -56,6 +65,7 @@ public class Pages {
 	private HomePage homePage;
 
 	private Icons_Page iconsPage;
+	private IncludeAndExcludeItems_Page includeAndExcludeItemsPage;
 	private Modal_Form_Page modalFormPage;
 
 	private MultipleAndRemote_Page multipleAndRemotePage;
@@ -76,8 +86,13 @@ public class Pages {
 
 	private SelectDateRange selectDateRange;
 
+	private SnapToIncrements_Page snapToIncrementsPage;
+
+	private SpinnerOverflow_Page spinnerOverflowPage;
+
 	private ToolBar_Page toolBarPage;
 
+	private ProductSelector_Page productSelectorPage;
 	private WebAutomationPage webAutomationPage;
 
 	public Pages() {
@@ -107,7 +122,12 @@ public class Pages {
 		displayMultipleMonthsPage = new DisplayMultipleMonths_Page();
 		selectDateRange = new SelectDateRange();
 		modalFormPage=new Modal_Form_Page();
-
+		snapToIncrementsPage=new SnapToIncrements_Page();
+		spinnerOverflowPage=new SpinnerOverflow_Page();
+		displayAsGridPage=new DisplayAsGrid_Page();
+		productSelectorPage=new ProductSelector_Page();
+		includeAndExcludeItemsPage=new IncludeAndExcludeItems_Page();
+		collapseContentPage=new CollapseContent_Page();
 	}
 
 	public HomePage getHomePage() {
@@ -210,5 +230,11 @@ public class Pages {
 		return selectDateRange;
 	}
 	public Modal_Form_Page getModalFormPage(){return modalFormPage;}
+	public SnapToIncrements_Page getSnapToIncrementsPage(){return snapToIncrementsPage;}
+	public SpinnerOverflow_Page getSpinnerOverflowPage(){return spinnerOverflowPage;}
+	public DisplayAsGrid_Page getDisplayAsGridPage(){return displayAsGridPage;}
+	public ProductSelector_Page getProductSelectorPage(){return productSelectorPage;}
+	public IncludeAndExcludeItems_Page getIncludeAndExcludeItemsPage(){return includeAndExcludeItemsPage;}
+	public CollapseContent_Page getCollapseContentPage(){return collapseContentPage;}
 
 }

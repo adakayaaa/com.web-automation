@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import pages.BasePage;
 
 import java.util.List;
+import java.util.stream.Stream;
 
 public class MultipleAndRemote_Page extends BasePage {
 
@@ -25,8 +26,8 @@ public class MultipleAndRemote_Page extends BasePage {
 		return suggestionLoadingMessage.getText();
 	}
 
-	public List<String> getBirdNamesOnSuggestionMenu() {
-		return suggestionMenu.stream().map(WebElement::getText).toList();
+	public Stream<String> getBirdNamesOnSuggestionMenu() {
+		return suggestionMenu.stream().map(WebElement::getText);
 	}
 
 	public boolean isDisplayedForSuggestionMenu() {

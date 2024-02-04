@@ -3,6 +3,7 @@ package pages.menu;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import pages.BasePage;
+import utils.BrowserUtils;
 
 public class Icons_Page extends BasePage {
 
@@ -37,7 +38,7 @@ public class Icons_Page extends BasePage {
 	private WebElement learnMoreAboutThisMenuButton;
 
 	public void moveToItem(WebElement webElement) {
-		actions.moveToElement(webElement).perform();
+		BrowserUtils.moveToElement(webElement);
 	}
 
 	public boolean isDisplayedActiveMessage(WebElement webElement) {

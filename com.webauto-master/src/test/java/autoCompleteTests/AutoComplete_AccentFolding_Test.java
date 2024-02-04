@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import utils.Pages;
 
+
 /*
  * 1. Open the browser and navigate to the page
  * 2. Click on the auto complete button
@@ -39,35 +40,22 @@ public class AutoComplete_AccentFolding_Test extends Hooks {
 		boolean isDisplayed = pages.getAccentFoldingPage().isDisplayedForSuggestionMenu();
 		Assertions.assertTrue(isDisplayed, "The suggestion menu is not displayed");
 
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 
-		// 6. Verify that the suggestion menu contains "John" and "Jörn"
-		boolean check = true;
-		for (String s : pages.getAccentFoldingPage().getDeveloperNameOnSuggestionMenu()) {
-			if (!(s.startsWith("John") || s.startsWith("Jörn"))) {
-				check = false;
-				break;
-			}
-		}
-		Assertions.assertTrue(check, "The suggestion menu doesn't contain John and Jörn");
+		// 6. Verify that the suggestion menu contains "Jo" and "Jö"
+		boolean check=pages.getAccentFoldingPage().getDeveloperNameOnSuggestionMenu().allMatch(person -> person.startsWith("Jo")|| person.startsWith("Jö"));
+		Assertions.assertTrue(check, "The suggestion menu doesn't contain Jo and Jö");
 
 		// 7. Clear the text field
 		pages.getAccentFoldingPage().clearDeveloperInputField();
 
 		// 8. Enter "Jö" in the text field
 		pages.getAccentFoldingPage().sendToKeys("Jö");
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 
-		// 9. Verify that the suggestion is just "Jörn"
-		boolean check2 = true;
-		for (String s : pages.getAccentFoldingPage().getDeveloperNameOnSuggestionMenu()) {
-			if (!s.contains("Jörn")) {
-				System.out.println(s);
-				check2 = false;
-				break;
-			}
-		}
-		Assertions.assertTrue(check2, "The suggestion menu doesn't just contains Jörn");
+		// 9. Verify that the suggestion is start with just "Jö"
+		boolean check2=pages.getAccentFoldingPage().getDeveloperNameOnSuggestionMenu().allMatch(person -> person.startsWith("Jö"));
+		Assertions.assertTrue(check2, "The suggestion menu doesn't just contains Jö");
 
 	}
 

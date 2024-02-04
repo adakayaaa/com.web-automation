@@ -40,7 +40,7 @@ public class DownloadDialog_Test extends Hooks {
 		pages.getWebAutomationPage().clickOnDownloadDialogLink();
 
 		// 4. Click on the Start Download button.
-		pages.getDownloadDialogPage().clickOnButton(pages.getDownloadDialogPage().getDownloadButton());
+		pages.getDownloadDialogPage().clickOnDownloadButton();
 
 		// 5. Verify that download is started.
 		boolean isDownloadStarted = pages.getDownloadDialogPage().isFileDownloadBarTitleDisplayed();
@@ -50,17 +50,17 @@ public class DownloadDialog_Test extends Hooks {
 		Thread.sleep(1000);
 
 		// 6. Click on the Cancel Download button.
-		pages.getDownloadDialogPage().clickOnButton(pages.getDownloadDialogPage().getCancelDownloadButton());
+		pages.getDownloadDialogPage().clickOnCancelDownloadButton();
 
 		// 7. Verify that download is cancelled.
 		String startDownloadButtonText = pages.getDownloadDialogPage().getDownloadButtonText();
 		Assertions.assertEquals(startDownloadButtonText, "Start Download", "The download is not cancelled!");
 
 		// 8. Click on the Start Download button again.
-		pages.getDownloadDialogPage().clickOnButton(pages.getDownloadDialogPage().getDownloadButton());
+		pages.getDownloadDialogPage().clickOnDownloadButton();
 
 		// 9. Click on the Close button.
-		pages.getDownloadDialogPage().clickOnButton(pages.getDownloadDialogPage().getCloseButton());
+		pages.getDownloadDialogPage().clickOnCloseButton();
 
 		// 10.Verify that download is closed.
 		String startDownloadButtonText2 = pages.getDownloadDialogPage().getDownloadButtonText();

@@ -4,7 +4,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 import pages.BasePage;
-import utils.Driver;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,17 +28,9 @@ public class ToolBar_Page extends BasePage {
 	@FindBy(xpath = "//button[text()='U']")
 	private WebElement underline;
 
-	@FindBy(xpath = "//button[text()='Print']")
-	private WebElement print;
-
 	@FindBy(id = "page")
 	private WebElement textArea;
 
-	@FindBy(xpath = "//*[@id=\"headerContainer\"]/h1")
-	private WebElement printTab;
-
-	@FindBy(xpath = "//*[@id=\"sidebar\"]//print-preview-button-strip//div/cr-button[2]")
-	private WebElement cancelPrint;
 
 	public void selectTheDropDownElement(String[] text) {
 		List<WebElement> listOfDropDowns = new ArrayList<>();
@@ -52,9 +43,6 @@ public class ToolBar_Page extends BasePage {
 		}
 	}
 
-	public String getTabPrintText() {
-		return printTab.getText();
-	}
 
 	public String getTextOfTextArea() {
 		return textArea.getAttribute("style");
@@ -72,12 +60,6 @@ public class ToolBar_Page extends BasePage {
 		return underline;
 	}
 
-	public WebElement getPrint() {
-		return print;
-	}
 
-	public WebElement getCancelPrint() {
-		return cancelPrint;
-	}
 
 }
