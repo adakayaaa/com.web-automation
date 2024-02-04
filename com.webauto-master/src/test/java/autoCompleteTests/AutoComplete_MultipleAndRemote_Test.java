@@ -53,16 +53,8 @@ public class AutoComplete_MultipleAndRemote_Test extends Hooks {
 		boolean isDisplayed2 = pages.getMultipleAndRemotePage().isDisplayedForSuggestionMenu();
 		Assertions.assertTrue(isDisplayed2, "The suggestion menu should displayed");
 
-		// 10.Verify that the suggestions in the menu starts with sp(suggestions can be
-		// more than one)
-		boolean check = true;
-		for (String s : pages.getMultipleAndRemotePage().getBirdNamesOnSuggestionMenu()) {
-			s = s.toLowerCase();
-			if (!s.startsWith("sp")) {
-				check = false;
-				break;
-			}
-		}
+		// 10.Verify that the suggestions in the menu starts with sp(suggestions can be more than one)
+		boolean check= pages.getMultipleAndRemotePage().getBirdNamesOnSuggestionMenu().allMatch(person -> person.toLowerCase().startsWith("sp"));
 		Assertions.assertTrue(check, "The suggestions are not starting with sp");
 
 	}

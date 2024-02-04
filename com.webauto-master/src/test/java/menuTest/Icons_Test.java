@@ -48,34 +48,29 @@ public class Icons_Test extends Hooks {
 		pages.getWebAutomationPage().clickOnIconLink();
 
 		// 4. Move to Save item
-		pages.getIconsPage().moveToItem(pages.getIconsPage().getSaveButton());
-
-		Thread.sleep(1000);
+		BrowserUtils.moveToElement(pages.getIconsPage().getSaveButton());
 
 		// 5. Verify that the save is active
 		boolean isActive = pages.getIconsPage().isDisplayedActiveMessage(pages.getIconsPage().getSaveButton());
 		Assertions.assertTrue(isActive, "The save icon is not active.");
 
 		// 6. Move to Zoom In item.
-		pages.getIconsPage().moveToItem(pages.getIconsPage().getZoomInButton());
+		BrowserUtils.moveToElement(pages.getIconsPage().getZoomInButton());
 
-		Thread.sleep(1000);
 		// 7. Verify that the zoom in is active
 		boolean isActive2 = pages.getIconsPage().isDisplayedActiveMessage(pages.getIconsPage().getZoomInButton());
 		Assertions.assertTrue(isActive2, "The zoom in icon is not active.");
 
 		// 8. Move to Zoom Out item.
-		pages.getIconsPage().moveToItem(pages.getIconsPage().getZoomOutButton());
+		BrowserUtils.moveToElement(pages.getIconsPage().getZoomOutButton());
 
-		Thread.sleep(1000);
 		// 9. Verify that the zoom out is active
 		boolean isActive3 = pages.getIconsPage().isDisplayedActiveMessage(pages.getIconsPage().getZoomOutButton());
 		Assertions.assertTrue(isActive3, "The zoom out icon is not active.");
 
 		// 10. Move to on Playback item.
-		pages.getIconsPage().moveToItem(pages.getIconsPage().getPlaybackButton());
+		BrowserUtils.moveToElement(pages.getIconsPage().getPlaybackButton());
 
-		Thread.sleep(1000);
 		// 11. Verify that selectable menu is displayed.
 		boolean isDisplayed = pages.getIconsPage().isDisplayedPlaybackItems();
 		Assertions.assertTrue(isDisplayed, "The playback's menu is not displayed.");
@@ -89,14 +84,13 @@ public class Icons_Test extends Hooks {
 		listOfPlaybackItems.add(pages.getIconsPage().getNextButton());
 
 		for (int i = 0; i < listOfPlaybackItems.size(); i++) {
-			pages.getIconsPage().moveToItem(listOfPlaybackItems.get(i));
-			Thread.sleep(1000);
+			BrowserUtils.moveToElement(listOfPlaybackItems.get(i));
 			boolean isActive4 = pages.getIconsPage().isDisplayedActiveMessage(listOfPlaybackItems.get(i));
 			Assertions.assertTrue(isActive4, "The" + listOfPlaybackItems.get(i) + " is not displayed");
 		}
 
 		// 14. Move to on learn more about this menu item.
-		pages.getIconsPage().moveToItem(pages.getIconsPage().getLearnMoreAboutThisMenuButton());
+		BrowserUtils.moveToElement(pages.getIconsPage().getLearnMoreAboutThisMenuButton());
 
 		Thread.sleep(1000);
 		// 15. Verify that learn more about this menu is active

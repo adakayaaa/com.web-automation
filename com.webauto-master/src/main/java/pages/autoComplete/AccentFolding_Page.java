@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import pages.BasePage;
 
 import java.util.List;
+import java.util.stream.Stream;
 
 public class AccentFolding_Page extends BasePage {
 
@@ -22,8 +23,8 @@ public class AccentFolding_Page extends BasePage {
 		developerInputField.clear();
 	}
 
-	public List<String> getDeveloperNameOnSuggestionMenu() {
-		return suggestionMenu.stream().map(WebElement::getText).toList();
+	public Stream<String> getDeveloperNameOnSuggestionMenu() {
+		return suggestionMenu.stream().map(WebElement::getText);
 	}
 
 	public boolean isDisplayedForSuggestionMenu() {
